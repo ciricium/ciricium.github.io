@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta property="og:url"                content="https://novamonika.github.io/dddg/" />
+  <meta property="og:type"               content="website" />
+  <meta property="og:title"              content="NovaMonika's Doki Doki Dialog Generator Extra Content Packs" />
+  <meta property="og:description"        content="NovaMonika's Doki Doki Dialog Generator Extra Content Packs" />
+  <meta property="og:image"              content="https://novamonika.github.io/dddg/webimages/logo.png" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="400" />
+    
+  <meta name="description" content="NovaMonika's Doki Doki Dialog Generator Extra Content Packs"/>
+  <meta name="keywords" content="NovaMonika's Doki Doki Dialog Generator Extra Content Packs" />
+  <meta name="DC.description" content="NovaMonika's Doki Doki Dialog Generator Extra Content Packs" />
+  
+  <title>NovaMonika's Doki Doki Dialog Generator Extra Content Packs</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Font Awesome CSS -->
+  <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="webimages/logo.png">
+</head>
+<body>
+<div id="bg" class="fullopacity"></div>
+<div id="content">
+	<div id="top">
+		<img id="toplogo" src="webimages/logo.png">
+		<p class="titletext outline">NovaMonika's Doki Doki Dialog Generator Extra Content Packs</p>
+		<p class="titletext2 outline">Extra Content Packs for <a href="https://edave64.github.io/Doki-Doki-Dialog-Generator/release/" target="_blank">edave64's Doki Doki Dialog Generator</a></p>		
+		<br>
+	</div>
+	<div class="stripe"></div>
+	
+	
+	
+</div>
+<div id="ddlc">
+	<p><b>Hi, this is a collection of packs I have created for Doki Doki Dialog Generator.</b></p>
+	<p>Click on the menu options below for pack links and installation instructions.</p>
+	<ul id="ac1_UL">
+		<li class="ac1_li"><span class="ac1_title"><span class="ac1_arrow"><i class="fa fa-chevron-right"></i></span>How to add a custom pack<br></span>
+			<div class="ac1_inner" style="text-align: left;">
+				<ul style="list-style: initial;">
+					<li>
+						<p>Click "Search in content packs" in the sidebar.</p>
+						<img style="max-width: 100%;" src="webimages/Step1.png"/>
+					</li>
+					<li>
+						<p>Paste the web address for the pack in the search bar then click "Add package".</p>
+						<img style="max-width: 100%;" src="webimages/Step2.png"/>
+					</li>
+					<li>
+						<p>Click "Activate" to add the pack to DDDG.</p>
+						<img style="max-width: 100%;" src="webimages/Step3.png"/>
+					</li>
+					<li>
+						<p>Select the new item from the sidebar.</p>
+						<img style="max-width: 100%;" src="webimages/Step4.png"/>
+					</li>
+					<li>
+						<p>The new sprite is now in the scene.</p>
+						<img style="max-width: 100%;" src="webimages/Step5.png"/>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="ac1_li"><span class="ac1_title"><span class="ac1_arrow"><i class="fa fa-chevron-right"></i></span>Pack List</span>
+			<div class="ac1_inner" id="packlist">
+			</div>
+		</li>
+	</ul>
+	<p>If you notice any issues with the packs, or want to suggest new ones for me to add, please contact me on <a href="https://www.reddit.com/user/NovaMonika" target="_blank">Reddit</a> or <a href="https://twitter.com/JustNovaMonika" target="_blank">Twitter</a> and <b>please be sure to credit the artists who made the sprites!</b></p>
+	<span class="fullwidthbanner"><img src="webimages/example.png"><p class="smallbannertext"><a href="https://novamonika.github.io/dddg/bikini.styles.monika.etched.edave64/repo.json" target="_blank">Example pack "Monika Bikini" by Etched</a></p></span>
+	<br>
+	<p class="footer">Special thanks to <a href="https://www.reddit.com/user/edave64/" target="_blank">edave64</a> for making <a href="https://edave64.github.io/Doki-Doki-Dialog-Generator/release/" target="_blank">Doki Doki Dialog Generator</a>!</p>	
+	<p class="footer">This is an unofficial fan work, unaffiliated with <a href="http://teamsalvato.com/" target="_blank">Team Salvato</a>.</p>
+</div>
+
+
+<script type="text/javascript">
+
+	var chrlist = []
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+
+	const entries = urlParams.entries();
+
+	var nsfwtick = "unchecked";
+	for(const entry of entries) {
+		if (entry[0].toUpperCase() == "NSFW") {
+			if (entry[1] == 1){
+				nsfwtick = "checked";
+			}
+		}
+	}
+
+	function ac1(index) {
+		var ac1_g = document.getElementById('ac1_UL');
+		for (var ac1_i = 0, ac1_len = ac1_g.children.length; ac1_i < ac1_len; ac1_i++) {
+			var ac1_item = ac1_g.children[ac1_i].children[1]
+			var ac1_arrow = ac1_g.children[ac1_i].children[0].children[0].children[0]
+			if (ac1_i == index) {
+				ac1_arrow.scrollIntoView();
+				if (ac1_item.style.display == "block") {
+					ac1_item.style.display = "none"
+					ac1_arrow.className = "fa fa-chevron-right"
+				} else {
+					ac1_item.style.display = "block"
+					ac1_arrow.className = "fa fa-chevron-right fa-rotate-90"
+				}
+			} else {
+				ac1_item.style.display = "none"
+				ac1_arrow.className = "fa fa-chevron-right"
+			}
+		}
+	}
+
+	var ac1_g = document.getElementById('ac1_UL');
+	for (var ac1_i = 0, ac1_len = ac1_g.children.length; ac1_i < ac1_len; ac1_i++) {
+		(function(ac1_index) {
+			ac1_g.children[ac1_i].children[0].onclick = function() {
+				ac1(ac1_index)
+			}
+		})(ac1_i);
+	}
+
+	function getjsons(){
+		fetch('lists/packlist.json')
+		.then(function (response) {
+			return response.json();
+		})
+		.then(async function (data) {
+			var listdiv = document.getElementById("packlist")
+			
+			var typemenu = "Pack Types:<br>"
+			
+			for (const k of Object.keys(data)) {
+				typemenu += "<span class=\"inputlabel\"><input type=\"checkbox\" class=\"typecheckbox\" id=\"cb"+k+"\" name=\""+k+"\" onclick=\"updatelists()\" checked><label for=\"cb"+k+"\">"+k+"</label></span>"
+
+				listdiv.innerHTML += "<p class=\"listtype "+k+"\" id=\"list"+k+"\"><b class=\"subtitle\">"+k+"</b><span class=\"midstripe\"></span></p>"
+				for (const pack of data[k]) {
+					response = await fetch(pack[1])
+					jsondata = await response.json();
+					appendData(jsondata, "list"+k, pack[0]);
+				}
+			}
+
+			typemenu += "<span class=\"inputlabel\"><input type=\"checkbox\" class=\"nsfwcheckbox\" id=\"cbNSFW\" name=\"nsfw\" onclick=\"updatelists()\" "+nsfwtick+"><label for=\"cbNSFW\">NSFW (18+)</label></span>"
+			
+			chrmenu = "<br>Characters:<br>"
+
+			for (const chr of chrlist) {
+				chrmenu +="<span class=\"inputlabel\"><input type=\"checkbox\" class=\"chrcheckbox\" id=\"cb"+chr[0]+"\" name=\""+chr[0]+"\" onclick=\"updatelists()\" checked><label for=\"cb"+chr[0]+"\">"+chr[1]+"</label></span>"
+			}
+
+			listdiv.innerHTML = "<span id=\"typechrmenu\">"+ typemenu + chrmenu + "</span>" + listdiv.innerHTML
+			updatelists()
+		})
+		.catch(function (err) {
+			console.log(err);
+		});
+	}
+
+	async function appendData(data, div, sfw) {	
+		
+		var authorslist = "Author(s):<br>"
+
+		for (const author of Object.keys(data["authors"])) {
+			authorslist += "<span>" + author
+			for (const soclink of Object.keys(data["authors"][author])) {
+				switch(soclink) {
+				case "reddit":
+					authorslist += " - <a href=\"https://reddit.com/u/"+data["authors"][author][soclink]+"\" target=\"_blank\">Reddit</a>"
+					break;
+				case "deviantart":
+					authorslist += " - <a href=\"https://www.deviantart.com/"+data["authors"][author][soclink]+"\" target=\"_blank\">DeviantArt</a>"
+					break;
+				case "twitter":
+				authorslist += " - <a href=\"https://twitter.com/"+data["authors"][author][soclink]+"\" target=\"_blank\">Twitter</a>"
+					break;
+				}
+			}
+			authorslist += "</span><br>"
+			
+		}
+
+		var imgpreview = "<br><span class=\"previewimgcont\"><span class=\"previewimg\">"
+		for (const image of data["pack"]["preview"]) {
+			imgpreview += "<img src=\""+image+"\"/>"
+		}
+		imgpreview += "</span></span>"
+
+		chrclasses = ""
+
+		for (const chr of data["pack"]["characters"]) {
+			tempchr = chr.replace(/[^A-Za-z']/g, "")
+			
+			let exists = chrlist.find(el => el[0] === tempchr);
+
+			if (!exists) {
+				chrlist.push([tempchr, chr]) 
+  			}
+			
+			chrclasses += tempchr + " "
+		}
+
+		listdiv = document.getElementById(div)
+		listdiv.innerHTML += "<span class=\"item "+sfw+" "+chrclasses+"\"><b>"+data["pack"]["characters"].join(', ')+" - " + data["pack"]["name"]+"</b>"+
+		imgpreview + "<span class=\"info\">" + authorslist+"<br><a href=\""+data["pack"]["source"]+"\" target=\"_blank\">Source</a><br></span>"+
+		"<code>https://novamonika.github.io/dddg/"+data["pack"]["id"]+"/repo.json</code>"+
+		"<span class=\"midstripe\"></span></span>";
+	}
+
+	function updatelists() {
+		document.querySelectorAll('.typecheckbox').forEach(function(checkbox) {
+    		if (checkbox.checked) {
+				document.querySelectorAll('.'+checkbox.name).forEach(function(item) {
+					item.style.setProperty('display', 'block');
+				});
+			} else {
+				document.querySelectorAll('.'+checkbox.name).forEach(function(item) {
+					item.style.setProperty('display', 'none');
+				});
+			}
+		});
+
+		document.querySelectorAll('.item').forEach(function(item){
+			item.style.removeProperty('display');
+		})
+
+		document.querySelectorAll('.chrcheckbox').forEach(function(checkbox) {
+    		if (checkbox.checked) {
+				document.querySelectorAll('.'+checkbox.name).forEach(function(item) {
+					item.style.setProperty('display', 'block');
+				});
+			}
+		});
+
+		document.querySelectorAll('.nsfwcheckbox').forEach(function(checkbox) {
+    		if (!checkbox.checked) {
+				document.querySelectorAll('.'+checkbox.name).forEach(function(item) {
+					item.style.setProperty('display', 'none', 'important');
+				});
+			}
+		});
+
+		document.querySelectorAll('.listtype').forEach(function(listtype) {
+    		var total = 0			
+			listtype.querySelectorAll('.item').forEach(function(item){
+	 	 		if (!(window.getComputedStyle(item).display  === "none")) {
+					total += 1
+				}
+			})
+			if (total == 0){
+				listtype.style.setProperty('display', 'none');
+			}
+		});
+
+
+	}
+
+	window.onload = ac1()
+	window.onload = getjsons()
+</script>
+
+</body>
+</html>
